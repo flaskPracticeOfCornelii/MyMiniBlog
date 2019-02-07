@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content1 %}
+
+    <div class="container">
+        <div class="row">
+            <a href="new" class="btn ml-auto articles-btn">Post Up</a>
+        </div>
+        <div class="row">
+            <table class="articles">
+                <tr class="article-table-head">
+                    <th>Id</th>
+                    <th>Titles</th>
+                </tr>
+                {% for d in data%}
+                <tr class="article-titles">
+                    <td>{{d[0]}}</td>
+                    <td><a href="{{d[0]}}">{{d[1]}}</a></td>
+                    
+                </tr>
+                {% endfor %}
+                
+            </table>
+
+        </div>    
+    </div>
+
+    
+    
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+
+{% block content1 %}
+    <h2 class="dispaly-3 ml-2">Write new articles!</h2>
+    
+    <form action="new/create" method="POST" class="m-1 p-1">
+        <div class="form-group">
+          <label for="title-textarea">Title</label>
+          <textarea class="form-control rounded-0" id="title-textarea" rows="1" name="title"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="content-textarea">Content</label>
+          <textarea class="form-control rounded-0" id="content-textarea" rows="10" name=content></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="author-textarea">Author</label>
+          <textarea class="form-control rounded-0" id="author-textarea" rows="1" name=author></textarea>
+        </div>
+        <input type="submit" value="Post Up" class="btn new-btn" />
+    </form>
+
+{% endblock%}
